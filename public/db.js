@@ -15,7 +15,7 @@ request.onsuccess = function (event) {
 };
 
 request.onerror = function (event) {
-  console.log("Woops! " + event.target.errorCode);
+  console.log("Err! " + event.target.errorCode);
 };
 
 function saveRecord(record) {
@@ -26,7 +26,7 @@ function saveRecord(record) {
   store.add(record);
 }
 
-unction checkDatabase() {
+function checkDatabase() {
 
   const transaction = db.transaction(["pending"], "readwrite");
 
